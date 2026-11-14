@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+    <style>
+      body {{
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        box-sizing: border-box;
+        place-items: center;
+        padding: 24px;
+        background: #eef4ef;
+        color: #18372f;
+        font: 1rem/1.6 Inter, "Microsoft YaHei", sans-serif;
+      }}
+      main {{
+        box-sizing: border-box;
+        width: min(100%, 480px);
+        padding: 32px;
+        border: 1px solid #c8d9ce;
+        border-radius: 16px;
+        background: #fff;
+      }}
+      h1 {{ margin: 0 0 16px; font-size: 1.5rem; }}
+      .percentage {{ display: block; font-size: 2.5rem; }}
+      progress {{ width: 100%; height: 16px; accent-color: #257256; }}
+      p {{ margin: 12px 0 0; }}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>{title}</h1>
+      <strong class="percentage">{percent}%</strong>
+      <progress value="{percent}" max="100" aria-label="阅读进度"></progress>
+      <p>已读 {completed} / {goal} 本</p>
+      <p>{note}</p>
+    </main>
+  </body>
+</html>
